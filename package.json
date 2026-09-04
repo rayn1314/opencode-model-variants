@@ -1,0 +1,43 @@
+{
+  "name": "opencode-model-variants",
+  "version": "1.0.0",
+  "description": "Give your OpenCode custom providers the official treatment: reasoning tiers, capabilities and context windows from models.dev — zero per-model config.",
+  "license": "MIT",
+  "author": "rayn",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src/",
+    "script/",
+    "data/",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "opencode": ">=1.4.0"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "update": "node script/update.mjs",
+    "update:check": "node script/update.mjs --check"
+  },
+  "devDependencies": {
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "models-dev",
+    "reasoning",
+    "variants",
+    "custom-providers"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayn/opencode-model-variants.git"
+  }
+}
