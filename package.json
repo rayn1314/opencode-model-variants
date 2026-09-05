@@ -14,7 +14,6 @@
     "script/",
     "data/",
     "README.md",
-    "README.zh.md",
     "LICENSE"
   ],
   "engines": {
