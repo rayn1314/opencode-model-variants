@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest"
 import plugin from "../src/index.js"
 
 function makeConfigHook(options) {
-  const hook = plugin(options).config
+  const hook = plugin(undefined, options).config
   return (cfg) => hook(cfg)
 }
 

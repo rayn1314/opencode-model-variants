@@ -186,7 +186,10 @@ function toggleLadder() {
 
 // ---- plugin -----------------------------------------------------------
 
-export default function ModelVariantsPlugin(options) {
+// OpenCode calls plugin factories as (input, options): `input` is the
+// PluginInput (client/project/...), `options` is the tuple-form config from
+// `"plugin": [["pkg", { ... }]]`.
+export default function ModelVariantsPlugin(input, options) {
   const opts = parseOptions(options)
   const resolved = resolveData(opts)
   const DATA = resolved.data
