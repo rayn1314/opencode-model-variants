@@ -224,7 +224,15 @@ export default function ModelVariantsPlugin(input, options) {
                 if (model.attachment === undefined) model.attachment = capsInfo.caps.attachment
                 if (model.reasoning === undefined) model.reasoning = capsInfo.caps.reasoning
               }
-              if (opts.syncLimit && model.limit === undefined && capsInfo.caps.limit) {
+              // limit.context === 0 means OpenCode core skips overflow
+              // detection entirely (auto-compaction never fires), so a zero
+              // context counts as "missing" — but an explicit non-zero limit
+              // the user wrote is never touched.
+              if (
+                opts.syncLimit &&
+                capsInfo.caps.limit &&
+                (!model.limit || !model.limit.context)
+              ) {
                 model.limit = structuredClone(capsInfo.caps.limit)
               }
             }

@@ -5,9 +5,9 @@
   "license": "MIT",
   "author": "rayn",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./src/index.js",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.js"
   },
   "files": [
     "src/",
